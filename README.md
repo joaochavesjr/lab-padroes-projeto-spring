@@ -4,3 +4,5 @@ Repositório com as implementações dos padrões de projeto explorados no Lab "
 - Singleton
 - Strategy/Repository
 - Facade
+
+Projeto herdado do laboratório "Padrões de Projetos na Prática com Java" utilizando o framework Spring.
