@@ -1,4 +1,4 @@
-package one.digitalinnovation.gof.controller;
+package br.com.joaochavesjr.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import one.digitalinnovation.gof.model.Cliente;
-import one.digitalinnovation.gof.service.ClienteService;
+import br.com.joaochavesjr.model.Loja;
+import br.com.joaochavesjr.service.LojaService;
 
 /**
  * Esse {@link RestController} representa nossa <b>Facade</b>, pois abstrai toda
@@ -22,37 +22,37 @@ import one.digitalinnovation.gof.service.ClienteService;
  * @author falvojr
  */
 @RestController
-@RequestMapping("clientes")
-public class ClienteRestController {
+@RequestMapping("lojas")
+public class LojaRestController {
 
 	@Autowired
-	private ClienteService clienteService;
+	private LojaService lojaService;
 
 	@GetMapping
-	public ResponseEntity<Iterable<Cliente>> buscarTodos() {
-		return ResponseEntity.ok(clienteService.buscarTodos());
+	public ResponseEntity<Iterable<Loja>> buscarTodos() {
+		return ResponseEntity.ok(lojaService.buscarTodos());
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<Cliente> buscarPorId(@PathVariable Long id) {
-		return ResponseEntity.ok(clienteService.buscarPorId(id));
+	public ResponseEntity<Loja> buscarPorId(@PathVariable Long id) {
+		return ResponseEntity.ok(lojaService.buscarPorId(id));
 	}
 
 	@PostMapping
-	public ResponseEntity<Cliente> inserir(@RequestBody Cliente cliente) {
-		clienteService.inserir(cliente);
-		return ResponseEntity.ok(cliente);
+	public ResponseEntity<Loja> inserir(@RequestBody Loja loja) {
+		lojaService.inserir(loja);
+		return ResponseEntity.ok(loja);
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<Cliente> atualizar(@PathVariable Long id, @RequestBody Cliente cliente) {
-		clienteService.atualizar(id, cliente);
-		return ResponseEntity.ok(cliente);
+	public ResponseEntity<Loja> atualizar(@PathVariable Long id, @RequestBody Loja loja) {
+		lojaService.atualizar(id, loja);
+		return ResponseEntity.ok(loja);
 	}
 
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> deletar(@PathVariable Long id) {
-		clienteService.deletar(id);
+		lojaService.deletar(id);
 		return ResponseEntity.ok().build();
 	}
 }

@@ -1,9 +1,9 @@
-package one.digitalinnovation.gof.model;
+package br.com.joaochavesjr.model;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ClienteRepository extends CrudRepository<Cliente, Long> {
+public interface LojaRepository extends CrudRepository<Loja, Long> {
 
 }

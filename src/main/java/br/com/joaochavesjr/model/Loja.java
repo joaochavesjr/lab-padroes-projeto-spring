@@ -1,4 +1,4 @@
-package one.digitalinnovation.gof.model;
+package br.com.joaochavesjr.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Cliente {
+public class Loja {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

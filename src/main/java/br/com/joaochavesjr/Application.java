@@ -1,4 +1,4 @@
-package one.digitalinnovation.gof;
+package br.com.joaochavesjr;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

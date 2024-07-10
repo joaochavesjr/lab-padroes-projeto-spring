@@ -1,4 +1,4 @@
-package one.digitalinnovation.gof.model;
+package br.com.joaochavesjr.model;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
